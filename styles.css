@@ -1,4 +1,58 @@
+/* ~~~~~~~~~~~~~ BASIC ELEMENTS ~~~~~~~~~~~~~~~ */
+
 * {
   font-family: 'Arvo', serif;
   font-weight: 400;
+  margin: 0;
+}
+
+body {
+  display: flex
+}
+
+div {
+  margin-top: 40px;
+}
+
+/* ~~~~~~~~~~~~~ MAIN VIEW EDGE AREAS ~~~~~~~~~~~~~~~ */
+
+
+.edge-section {
+  width: 20%;
+  background-color: #D48258;
+  font-size: 25px;
+  text-align: center;
+}
+
+
+/* ~~~~~~~~~~~~~ GAME PLAY AREA ~~~~~~~~~~~~~~~ */
+
+.game-section {
+  width: 60%;
+  height: 100vh;
+  background-color: #ECB983;
+  font-size: 40px;
+  text-align: center;
+}
+
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.game-button {
+  cursor: pointer;
+  color: #ECB983;
+  background-color: black;
+  width: 300px;
+  height: 200px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.game-button:hover {
+  background-color: white;
+  color: #D48258;
 }
