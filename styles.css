@@ -10,8 +10,12 @@ body {
   display: flex
 }
 
-div {
+.margins {
   margin-top: 40px;
+}
+
+.button-spacing {
+  margin-top: 35px;
 }
 
 /* ~~~~~~~~~~~~~ MAIN VIEW EDGE AREAS ~~~~~~~~~~~~~~~ */
@@ -24,10 +28,14 @@ div {
   text-align: center;
 }
 
+.button-images {
+  max-width: 25px;
+  max-height: inherit;
+}
 
-/* ~~~~~~~~~~~~~ GAME PLAY AREA ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~~~~~~ */
 
-.game-section {
+.home-section {
   width: 60%;
   height: 100vh;
   background-color: #ECB983;
@@ -39,20 +47,77 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .game-button {
   cursor: pointer;
   color: #ECB983;
-  background-color: black;
-  width: 300px;
-  height: 200px;
+  background-color: white;
+  width: 400px;
+  height: 250px;
   border: none;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .game-button:hover {
+  background-color: #D48258;
+  color: black;
+}
+
+/* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE BESTIE' VIEW ~~~~~~~~~~~~~~~ */
+
+.bestie-buttons-section {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.bestie-buttons {
+  border: none;
+  /* margin-left: 20px; */
+}
+
+.bestie-buttons:hover {
+  cursor: pointer;
+  background-color: #D48258;
+}
+
+.choose-bestie-button-image {
+  max-width: 150px;
+  max-height: inherit;
+}
+
+.emoji-selection {
+  
+}
+
+
+
+
+/* ~~~~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~~~~ */
+
+.different-game-button {
+  cursor: pointer;
+  background-color: #ECB983;
+  border: none;
+  width: 150px;
+  height: 50px;
+  margin-top: 100px;
+}
+
+.different-game-button:hover {
+  cursor:pointer;
   background-color: white;
-  color: #D48258;
+  color: #ECB983
+}
+
+
+/* ~~~~~~~~~~~~~ HIDDEN ~~~~~~~~~~~~~~~ */
+
+.hidden {
+  display: none;
 }
