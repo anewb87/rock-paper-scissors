@@ -10,7 +10,7 @@ body {
   display: flex
 }
 
-.margins {
+.titles {
   margin-top: 40px;
 }
 
@@ -33,6 +33,10 @@ body {
   max-height: inherit;
 }
 
+.emojis {
+  font-size: 50px;
+}
+
 /* ~~~~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~~~~~~ */
 
 .home-section {
@@ -43,7 +47,7 @@ body {
   text-align: center;
 }
 
-.button-section {
+.select-game-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,19 +70,18 @@ body {
   color: black;
 }
 
-/* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE BESTIE' VIEW ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~~~~ */
 
-.bestie-buttons-section {
-  margin-top: 200px;
+.choose-button-section {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
-  gap: 40px;
-
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .bestie-buttons {
   border: none;
-  /* margin-left: 20px; */
 }
 
 .bestie-buttons:hover {
@@ -92,7 +95,7 @@ body {
 }
 
 .emoji-selection {
-  
+
 }
 
 
