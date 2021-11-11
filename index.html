@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
     <link rel="stylesheet" href="./styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <section class='human-section edge-section'>
+    <section class='side-bar'>
       <div class="titles">
         <p class='emojis'>&#128516;</p>
         <h3>Human Placeholder</h3>
@@ -15,13 +15,11 @@
       </div>
       <button class= 'different-game-button hidden'>DIFFERENT GAME</button></button>
     </section>
-    <section class='home-section'>
-      <section>
-        <div class='titles'>
-          <h1>Bear, Bee, Bowling Ball</h1>
-          <h5>Choose Your Game Placeholder</h5>
-        </div>
-      </section>
+    <section class='game-board-section'>
+      <div class='titles'>
+        <h1>Bear, Bee, Bowling Ball</h1>
+        <h5 class='message'>Choose Your Game Placeholder</h5>
+      </div>
       <section class='select-game-section'>
         <button class='game-button basic-button'><img class="button-images" src="./assets/bear.png" alt="bear image"/>&nbsp;&nbsp;BASIC&nbsp;&nbsp;<img class="button-images" src="./assets/bee.png" alt="bee image"/><br />
           <div class='button-spacing'>
@@ -40,30 +38,30 @@
           </div>
         </button>
       </section>
-      <section class='choose-button-section hidden' >
+      <section class='choose-button-section' >
         <section>
-          <button class='selection-buttons'><img class='selection-button-image' src="./assets/bear.png" alt="bear image"/></button>
-          <p class='emoji-selection'>emoji</p>
-        </section>
-        <section>
-          <button class='selection-buttons'><img class='selection-button-image' src="./assets/bee.png" alt="bee image"/></button>
-          <p class='emoji-selection'>emoji</p>
+          <button class='selection-buttons'><img class='selection-button-image' src="./assets/bear.png" alt="bear"/></button>
+          <p class='player-token hidden'>emoji</p>
         </section>
         <section>
-          <button class= 'selection-buttons'><img class='selection-button-image' src="./assets/bowling.png" alt="bowling image"/></button>
-          <p class='emoji-selection'>emoji</p>
+          <button class='selection-buttons'><img class='selection-button-image' src="./assets/bee.png" alt="bee"/></button>
+          <p class='player-token hidden'>emoji</p>
         </section>
-        <section class='beast-mode-view bike-section'>
-          <button class='selection-buttons beast-button'><img class='selection-button-image' src="./assets/bike.png" alt="bike image"/></button>
-          <p class='emoji-selection'>emoji</p>
+        <section>
+          <button class= 'selection-buttons'><img class='selection-button-image' src="./assets/bowling.png" alt="bowling"/></button>
+          <p class='player-token hidden'>emoji</p>
         </section>
-        <section class='beast-mode-view brunch-section'>
+        <section class='bike'>
+          <button class='selection-buttons beast-button'><img class='selection-button-image' src="./assets/bike.png" alt="bike"/></button>
+          <p class='player-token hidden'>emoji</p>
+        </section>
+        <section class='brunch'>
           <button class='selection-buttons beast-button'><img class='selection-button-image' src="./assets/brunch.png" alt="brunch image"/></button>
-          <p class='emoji-selection'>emoji</p>
+          <p class='player-token hidden'>emoji</p>
         </section>
       </section>
     </section>
-    <section class='computer-section edge-section'>
+    <section class='side-bar'>
       <div class='titles'>
         <p class='emojis'>&#128187;</p>
         <h3>Computer Placeholder</h3>
