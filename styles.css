@@ -80,16 +80,16 @@ body {
   gap: 100px;
 }
 
-.bestie-buttons {
+.selection-buttons {
   border: none;
 }
 
-.bestie-buttons:hover {
+.selection-buttons:hover {
   cursor: pointer;
   background-color: #D48258;
 }
 
-.choose-bestie-button-image {
+.selection-button-image {
   max-width: 150px;
   max-height: inherit;
 }
