@@ -16,7 +16,7 @@ class Player {
       this.buddy = buddy
     } else {
       var buddies = ['bear', 'bee', 'bowling ball'];
-      var getRandomIndex = Math.floor(Math.random() * 3);
+      var randomBuddyIndex = Math.floor(Math.random() * 3);
       this.buddy = buddies[getRandomIndex]
     }
   }
@@ -25,7 +25,7 @@ class Player {
       this.buddy = buddy
     } else {
       var buddies = ['bear', 'bee', 'bowling ball', 'brunch', 'bicycle'];
-      var getRandomIndex = Math.floor(Math.random() * 5);
+      var randomBuddyIndex = Math.floor(Math.random() * 5);
       this.buddy = buddies[getRandomIndex]
     }
   }
