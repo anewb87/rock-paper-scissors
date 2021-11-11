@@ -1,8 +1,8 @@
 class Game {
   constructor(type) {
-    this.human = new Player('Human', 😄);
-    this.computer = new Computer('Computer', 💻)
-    this.message ='Choose your game!'
+    this.human = new Player('Human', '😄');
+    this.computer = new Player ('Computer', '💻')
+    this.message = 'Choose your game!'
     this.type = type;
     //game must time out
   }
@@ -15,8 +15,9 @@ class Game {
     //set timeout function;
     //go to the main view of the specific board
   }
-  determineGameType() {
-    if (this.type === 'buddy') {
+  determineGameType(buddy) {
+    this.message = 'Choose your buddy!'
+    if (this.type === 'basic') {
       determineWinnerBasic(buddy)
     } else {
       determineWinnerBeast(buddy)
