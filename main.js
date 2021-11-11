@@ -1,7 +1,7 @@
 var basicBtn = document.querySelector(".basic-button")
 var beastBtn = document.querySelector(".beast-mode-button")
 var selectGameView = document.querySelector(".select-game-section")
-var beastGameView = document.querySelector(".choose-button-section")
+var beastGameView = document.querySelector(".select-buddy-section")
 var bike = document.querySelector(".bike")
 var brunch = document.querySelector(".brunch")
 

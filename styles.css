@@ -15,11 +15,10 @@ body {
 }
 
 .button-spacing {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 /* ~~~~~~~~~~~~~ MAIN VIEW EDGE AREAS ~~~~~~~~~~~~~~~ */
-
 
 .side-bar {
   width: 20%;
@@ -33,7 +32,7 @@ body {
   max-height: inherit;
 }
 
-.emojis {
+.player-tokens {
   font-size: 50px;
 }
 
@@ -72,7 +71,7 @@ body {
 
 /* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~~~~ */
 
-.choose-button-section {
+.select-buddy-section {
   margin-top: 70px;
   display: flex;
   justify-content: center;
@@ -80,16 +79,16 @@ body {
   gap: 100px;
 }
 
-.selection-buttons {
+.buddy-buttons {
   border: none;
 }
 
-.selection-buttons:hover {
+.buddy-buttons:hover {
   cursor: pointer;
   background-color: #D48258;
 }
 
-.selection-button-image {
+.buddy-button-image {
   max-width: 150px;
   max-height: inherit;
 }
