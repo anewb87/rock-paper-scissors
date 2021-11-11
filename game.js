@@ -1,6 +1,17 @@
-class Game {
-  constructor() {
+var Player = require('./Player');
 
+class Game {
+  constructor(type) {
+//    this.gameboardData = {}
+    this.type = type
+  }
+  initializeNewGame() {
+    var human = new Player('Human', token, 0);
+    var computer = new Player('Computer', token, 0);
+  }
+  resetGameBoard() {
+    //set timeout function;
+    //go to the main view of the specific board
   }
 }
 
