@@ -21,7 +21,7 @@ body {
 /* ~~~~~~~~~~~~~ MAIN VIEW EDGE AREAS ~~~~~~~~~~~~~~~ */
 
 
-.edge-section {
+.side-bar {
   width: 20%;
   background-color: #D48258;
   font-size: 25px;
@@ -39,7 +39,7 @@ body {
 
 /* ~~~~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~~~~~~ */
 
-.home-section {
+.game-board-section {
   width: 60%;
   height: 100vh;
   background-color: #ECB983;
@@ -73,7 +73,7 @@ body {
 /* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~~~~ */
 
 .choose-button-section {
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -94,10 +94,9 @@ body {
   max-height: inherit;
 }
 
-.emoji-selection {
-
+.player-token {
+  font-size: 30px;
 }
-
 
 
 
