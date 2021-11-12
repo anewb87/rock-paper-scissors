@@ -5,39 +5,19 @@ var selectGameView = document.querySelector(".select-game-section")
 var gameView = document.querySelector(".select-buddy-section")
 var bike = document.querySelector(".bike")
 var brunch = document.querySelector(".brunch")
-//var bearBuddy = document.querySelector(".bear-buddy")
-//var beeBuddy = document.querySelector(".bee-buddy")
-// var bowlingBuddy = document.querySelector(".bowling-buddy")
-// var bikeBuddy = document.querySelector(".bike-buddy")
-// var brunchBuddy = document.querySelector(".brunch-buddy")
-//var getBuddyValues = document.querySelector(".get-buddy-values")
-//don't currently need above with gameView
-
 
 
 basicBtn.addEventListener("click", displayBasicGame)
-
-  //game.determineGame();
-
 beastBtn.addEventListener("click", displayBeastGame)
-
-  //game.determineGame();
-
 gameView.addEventListener("click", function(e){
   playGame(e)
-})
+});
 
 window.onload = hide(gameView)
 
-
 function playGame(e){
   game.determineGame(e.target.alt)
-  // console.log(e.target.alt)
-}
-
-
-//on page load, hide(gameView)
-
+};
 
 function displayBasicGame() {
   hide(selectGameView);
@@ -64,7 +44,5 @@ function hide(element) {
 };
 
 
-
-//all functionality for displaying
-//set timout
+//dont forget to set timout- might not belong here, need to thing through
 //the event is load- then re-diplay the home page
