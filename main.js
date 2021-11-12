@@ -5,10 +5,12 @@ var selectGameView = document.querySelector(".select-game-section")
 var gameView = document.querySelector(".select-buddy-section")
 var bike = document.querySelector(".bike")
 var brunch = document.querySelector(".brunch")
+var changeGameBtn = document.querySelector(".change-game-button")
 
 
 basicBtn.addEventListener("click", displayBasicGame)
 beastBtn.addEventListener("click", displayBeastGame)
+changeGameBtn.addEventListener("click", displayHome)
 gameView.addEventListener("click", function(e){
   playGame(e)
 });
@@ -21,19 +23,29 @@ function playGame(e){
 
 function displayBasicGame() {
   hide(selectGameView);
-  show(gameView);
   hide(bike);
   hide(brunch);
-  game.type = 'basic';
+  show(gameView);
+  show(changeGameBtn);
+  game.type = "basic";
   console.log(game)
 };
 
 function displayBeastGame() {
-  hide(selectGameView)
+  hide(selectGameView);
   show(gameView);
-  game.type = 'beast'
+  show(changeGameBtn);
+  game.type = "beast"
   console.log(game)
 };
+
+function displayHome() {
+  hide(gameView);
+  hide(bike);
+  hide(brunch);
+  hide(changeGameBtn);
+  show(selectGameView);
+}
 
 function show(element) {
   element.classList.remove("hidden");
