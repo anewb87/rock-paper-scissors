@@ -6,11 +6,7 @@ class Game {
     this.type = type;
     //game must time out
   }
-  // initializeNewGame() {
-  //   var human = new Player('Human', token, 0);
-  //   var computer = new Player('Computer', token, 0);
-  // }
-  //I think this code is redundant.
+
   resetGameBoard() {
     //set timeout function;
     //go to the main view of the specific board
@@ -57,6 +53,7 @@ class Game {
       console.log(this.message)
     }
   }
+  
   humanWins(){
     if (this.human.buddy === 'bear' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) {
       return true
