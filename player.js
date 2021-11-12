@@ -17,7 +17,7 @@ class Player {
     } else {
       var buddies = ['bear', 'bee', 'bowling ball'];
       var randomBuddyIndex = Math.floor(Math.random() * 3);
-      this.buddy = buddies[getRandomIndex]
+      this.buddy = buddies[randomBuddyIndex]
     }
   }
   takeTurnBeast(buddy) {

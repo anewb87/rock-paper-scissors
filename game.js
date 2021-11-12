@@ -15,21 +15,21 @@ class Game {
     //set timeout function;
     //go to the main view of the specific board
   }
-  determineGameType(buddy) {
+  determineGame(buddy) {
     this.message = 'Choose your buddy!'
     if (this.type === 'basic') {
-      determineWinnerBasic(buddy)
+      playBasicGame(buddy)
     } else {
-      determineWinnerBeast(buddy)
+      playBeastGame(buddy)
     }
     //I don't yet know where 'budy'/ type in constructor is coming from. Needs to connect to the button selected.
   }
-  determineWinnerBasic(buddy) {
+  playBasicGame(buddy) {
     this.human.takeTurnBasic(buddy);
     this.computer.takeTurnBasic();
     //game logic here
   }
-  determineWinnerBeast(buddy) {
+  playBeastGame(buddy) {
     this.human.takeTurnBeast(buddy);
     this.computer.takeTurnBasic();
     //game logic here

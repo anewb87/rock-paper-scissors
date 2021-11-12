@@ -1,4 +1,4 @@
-var game = {}
+var game = new Game('');
 var basicBtn = document.querySelector(".basic-button")
 var beastBtn = document.querySelector(".beast-mode-button")
 var selectGameView = document.querySelector(".select-game-section")
@@ -15,29 +15,23 @@ var brunch = document.querySelector(".brunch")
 
 
 
-basicBtn.addEventListener("click", function(e){
-  displayBasicGame();
-  game = new Game(e.target.id);
-  console.log(game)
-  //game.determineGameType();
-})
+basicBtn.addEventListener("click", displayBasicGame)
 
-beastBtn.addEventListener("click", function(e){
-  displayBeastGame();
-  game = new Game(e.target.id);
-  console.log(game)
-  //game.determineGameType();
+  //game.determineGame();
 
-})
-// bearBuddy.addEventListener("click", function(e){
-//   console.log(e.target.alt)
-// })
+beastBtn.addEventListener("click", displayBeastGame)
+
+  //game.determineGame();
+
+
+
+
 gameView.addEventListener("click", function(e){
   playGame(e)
 })
 
 function playGame(e){
-  game.determineWinnerBasic(e.target.alt)
+  game.determineGame(e.target.alt)
 }
 
 
@@ -47,11 +41,15 @@ function displayBasicGame() {
   show(gameView);
   hide(bike);
   hide(brunch);
+  game.type = 'basic';
+  console.log(game)
 };
 
 function displayBeastGame() {
   hide(selectGameView)
   show(gameView);
+  game.type = 'beast'
+  console.log(game)
 };
 
 function show(element) {
