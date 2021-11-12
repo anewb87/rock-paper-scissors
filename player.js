@@ -14,19 +14,23 @@ class Player {
   takeTurnBasic(buddy) {
     if (buddy) {
       this.buddy = buddy
+      console.log(this.buddy)
     } else {
-      var buddies = ['bear', 'bee', 'bowling ball'];
+      var buddies = ['bear', 'bee', 'bowling'];
       var randomBuddyIndex = Math.floor(Math.random() * 3);
       this.buddy = buddies[randomBuddyIndex]
+      console.log(this.buddy)
     }
   }
   takeTurnBeast(buddy) {
     if (buddy) {
       this.buddy = buddy
+      console.log(this.buddy)
     } else {
-      var buddies = ['bear', 'bee', 'bowling ball', 'brunch', 'bicycle'];
+      var buddies = ['bear', 'bee', 'bowling', 'brunch', 'bicycle'];
       var randomBuddyIndex = Math.floor(Math.random() * 5);
-      this.buddy = buddies[getRandomIndex]
+      this.buddy = buddies[randomBuddyIndex]
+      console.log(this.buddy)
     }
   }
 }
