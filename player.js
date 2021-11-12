@@ -5,12 +5,15 @@ class Player {
     this.wins = 0;
     this.buddy
   }
+
   saveWinsToStorage() {
     //localStorage.setItem()
   }
+
   retrieveWinsFromStorage() {
     //localStorage.getItem()
   }
+
   takeTurnBasic(buddy) {
     if (buddy) {
       this.buddy = buddy
@@ -22,6 +25,7 @@ class Player {
       console.log(this.buddy)
     }
   }
+  
   takeTurnBeast(buddy) {
     if (buddy) {
       this.buddy = buddy
@@ -33,16 +37,4 @@ class Player {
       console.log(this.buddy)
     }
   }
-}
-
-
-
-//takeTurn notes:
-//human takes a turn and computer takes a turn -> this happens in the GAME
-//human needs a buddy
-//computer needs a buddy
-//
-// from romcom:
-// function getRandomIndex(array) {
-//   return Math.floor(Math.random() * array.length);
-// }
+};

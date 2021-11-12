@@ -15,6 +15,7 @@ class Game {
     //set timeout function;
     //go to the main view of the specific board
   }
+
   determineGame(buddy) {
     this.message = 'Choose your buddy!'
     if (this.type === 'basic') {
@@ -23,41 +24,71 @@ class Game {
       this.playBeastGame(buddy)
     }
   }
+
   playBasicGame(buddy) {
     this.human.takeTurnBasic(buddy);
     this.computer.takeTurnBasic();
-    //game logic here
+    if (this.human.buddy === this.computer.buddy) {
+      this.message = "😑 Twin Buddies! It's a Tie! 😑"
+      console.log(this.message)
+    } else if (this.humanWins()) {
+      this.message = "😄 Human's Buddy for the Win! 😄"
+      console.log(this.message)
+    } else {
+      this.computer.wins ++;
+      this.message = "💻 Computer's Buddy for the Win! 💻"
+      console.log(this.message)
+    }
   }
+
   playBeastGame(buddy) {
-    this.human.takeTurnBeast(buddy);
-    this.computer.takeTurnBeast();
-    //game logic here
+    this.human.takeTurnBasic(buddy);
+    this.computer.takeTurnBasic();
+    if (this.human.buddy === this.computer.buddy) {
+      this.message = "😑 Twin Buddies! It's a Tie! 😑"
+      console.log(this.message)
+    } else if (this.humanWins()) {
+      this.human.wins ++
+      this.message = "😄 Human's Buddy for the Win! 😄"
+      console.log(this.message)
+    } else {
+      this.computer.wins ++;
+      this.message = "💻 Computer's Buddy for the Win! 💻"
+      console.log(this.message)
+    }
   }
-    //I don't yet know where 'budy'/ type in constructor is coming from. Needs to connect to the button selected.
-}
+  humanWins(){
+    if (this.human.buddy === 'bear' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) {
+      return true
+    } else if (this.human.buddy === 'bee' && (this.computer.buddy === 'bear' || this.computer.buddy === 'bike')) {
+      return true
+    } else if (this.human.buddy === 'bowling' && (this.computer.buddy === 'bee' || this.computer.buddy === 'brunch')) {
+      return true
+    } else if (this.human.buddy === 'bike' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'bear')) {
+      return true
+    } else if (this.human.buddy === 'brunch' && (this.computer.buddy === 'bike' || this.computer.buddy === 'bee')) {
+      return true
+    }
+    return false
+  }
+
+};
+
 
 
 
 // includes:
-//   2 Player instances (human, computer)
-//   A way to keep track of the data for the game board
-//   A way to keep track of the selected game type
-//   A way to detect when a game is a draw (no one has won)
-      //I beleive this could also be a big conditional that determines who wins and loses.
+//   done-2 Player instances (human, computer)
+
+//   A way to keep track of the data for the game board: I'm thinking/assuming this means basically all the game logic except for a tie
+
+//   done-A way to keep track of the selected game type
+
+//   done-A way to detect when a game is a draw (no one has won)
+
 //   A way to reset the Game’s board to begin a new game
 
 
-//if statements for the rules of the game
-
-//functionality to decide who the win
-
-//the thing that the computer selects goes up against the randomized computer selection (reference romcom project)
-
-
-//if game is selected - 1 set of rules
-
-//if harder game is selected - 1 other set of rules
-
-
 //Game logic:
+//tie if buddies are the same
 //human wins if
