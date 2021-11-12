@@ -23,17 +23,20 @@ beastBtn.addEventListener("click", displayBeastGame)
 
   //game.determineGame();
 
-
-
-
 gameView.addEventListener("click", function(e){
   playGame(e)
 })
 
+window.onload = hide(gameView)
+
+
 function playGame(e){
   game.determineGame(e.target.alt)
+  // console.log(e.target.alt)
 }
 
+
+//on page load, hide(gameView)
 
 
 function displayBasicGame() {

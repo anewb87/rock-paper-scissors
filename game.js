@@ -18,11 +18,10 @@ class Game {
   determineGame(buddy) {
     this.message = 'Choose your buddy!'
     if (this.type === 'basic') {
-      playBasicGame(buddy)
+      this.playBasicGame(buddy)
     } else {
-      playBeastGame(buddy)
+      this.playBeastGame(buddy)
     }
-    //I don't yet know where 'budy'/ type in constructor is coming from. Needs to connect to the button selected.
   }
   playBasicGame(buddy) {
     this.human.takeTurnBasic(buddy);
@@ -31,9 +30,10 @@ class Game {
   }
   playBeastGame(buddy) {
     this.human.takeTurnBeast(buddy);
-    this.computer.takeTurnBasic();
+    this.computer.takeTurnBeast();
     //game logic here
   }
+    //I don't yet know where 'budy'/ type in constructor is coming from. Needs to connect to the button selected.
 }
 
 
