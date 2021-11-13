@@ -2,7 +2,7 @@ class Game {
   constructor(type) {
     this.human = new Player('Human', '😄');
     this.computer = new Player ('Computer', '💻')
-    this.message
+    this.message = 'choose your game'
     this.type = type;
     //game must time out
   }

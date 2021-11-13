@@ -1,22 +1,27 @@
 var game = new Game();
-var basicBtn = document.querySelector(".basic-button")
-var beastBtn = document.querySelector(".beast-mode-button")
-var changeGameBtn = document.querySelector(".change-game-button")
-var selectGameView = document.querySelector(".select-game-section")
-var gameView = document.querySelector(".select-buddy-section")
-var bike = document.querySelector(".bike")
-var brunch = document.querySelector(".brunch")
+var basicBtn = document.querySelector(".basic-button");
+var beastBtn = document.querySelector(".beast-mode-button");
+var changeGameBtn = document.querySelector(".change-game-button");
+var selectGameView = document.querySelector(".select-game-section");
+var gameView = document.querySelector(".select-buddy-section");
+var bike = document.querySelector(".bike");
+var brunch = document.querySelector(".brunch");
 
-var message = document.querySelector("h5")
-var humanWins = document.querySelector(".human-wins")
-var computerWins = document.querySelector(".computer-wins")
-
-var selectedBuddiesSection = document.querySelectorAll(".selected-buddies-section")
+//line 11 below is a query select for the currently empty section in which to put the selected buddies to 'face-off' for the game
+//var selectedBuddiesSection = document.querySelectorAll(".selected-buddies-section");
 
 
+//These are the query selectors for the info displayed on the DOM on page load that is updated from the data model. Is it better to have the space in the HTML already and query select, as I've done here, or is it better to simply NOT have it in the HTML and do some .innerHTML on page load?
+var message = document.querySelector("h5");
+var humanToken = document.querySelector(".human-token");
+var humanPlayer = document.querySelector(".human-player");
+var humanWins = document.querySelector(".human-wins");
+var computerToken = document.querySelector(".computer-token")
+var computerPlayer = document.querySelector(".computer-player")
+var computerWins = document.querySelector(".computer-wins");
+var humanBearSelection =document.querySelector(".bear")
 
 
-// var humanBearSelection =document.querySelector(".bear")
 
 basicBtn.addEventListener("click", displayBasicGame)
 beastBtn.addEventListener("click", displayBeastGame)
@@ -26,6 +31,17 @@ gameView.addEventListener("click", function(e){
 });
 
 window.onload = hide(gameView)
+window.onload = updatePlayerInfoOnLoad()
+
+function updatePlayerInfoOnLoad() {
+  message.innerText = game.message;
+  humanToken.innerText = game.human.token;
+  computerToken.innerText = game.computer.token;
+  humanPlayer.innerText = game.human.name;
+  computerPlayer.innerText = game.computer.name;
+  humanWins.innerText = game.human.wins;
+  computerWins.innerText = game.computer.wins;
+}
 
 function play(e){
   if (e.target.classList.contains("buddy-button-image")) {
@@ -33,15 +49,10 @@ function play(e){
   }
   show(e.target.nextElementSibling)
   message.innerText = game.message;
-  humanWins.innerText = `Wins: ${game.human.wins}`;
-  computerWins.innerText = `Wins: ${game.computer.wins}`;
-//  showSelectedBuddies()
+  humanWins.innerText = `${game.human.wins}`;
+  computerWins.innerText = `${game.computer.wins}`;
 };
 
-// show(humanBearSelection)
-// function revealHumanSelection() {
-//
-// }
 
 function showSelectedBuddies() {
   var humanBuddy = document.querySelector(`#${game.human.buddy}`)
