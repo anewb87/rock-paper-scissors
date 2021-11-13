@@ -7,16 +7,11 @@ class Game {
     //game must time out
   }
 
-  resetGameBoard() {
-    //set timeout function;
-    //go to the main view of the specific board
-  }
-
   playGame(buddy) {
     this.human.takeTurn(buddy);
     this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
-      this.message = "😑 Twin Buddies! It's a Tie! 😑"
+      this.message = "😑 Twin Buddies. It's a Tie. 😑"
       console.log(this.message)
     } else if (this.humanWins()) {
       this.human.wins ++;
@@ -44,9 +39,27 @@ class Game {
       return false
     }
   }
+
+  resetGameBoard() {
+    //set timeout function;
+    //go to the main view of the specific board
+  }
 };
 
 
+
+//In an attempt to make this code DRYer, I tried out the code below, but it did NOT work
+// humanWins(){
+//   if (this.human.buddy === 'bear' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) || {
+//   (this.human.buddy === 'bee' && (this.computer.buddy === 'bear' || this.computer.buddy === 'bike')) ||
+//   (this.human.buddy === 'bowling' && (this.computer.buddy === 'bee' || this.computer.buddy === 'brunch')) ||
+//   (this.human.buddy === 'bike' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'bear')) ||
+//   (this.human.buddy === 'brunch' && (this.computer.buddy === 'bike' || this.computer.buddy === 'bee')) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
 
 
 // includes:
