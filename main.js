@@ -2,6 +2,7 @@ var game = new Game();
 var basicBtn = document.querySelector(".basic-button");
 var beastBtn = document.querySelector(".beast-mode-button");
 var changeGameBtn = document.querySelector(".change-game-button");
+var resetWinsBtn = document.querySelector(".reset-wins-button");
 var selectGameView = document.querySelector(".select-game-section");
 var gameView = document.querySelector(".select-buddy-section");
 var bike = document.querySelector(".bike");
@@ -26,6 +27,7 @@ var humanBearSelection =document.querySelector(".bear");
 basicBtn.addEventListener("click", displayBasicGame);
 beastBtn.addEventListener("click", displayBeastGame);
 changeGameBtn.addEventListener("click", displayHome);
+resetWinsBtn.addEventListener("click", resetWins)
 gameView.addEventListener("click", function(e){
   playGame(e)
 });
@@ -61,7 +63,10 @@ function updateWinCount() {
   computerWins.innerText = game.computer.retrieveWinsFromStorage() || 0
 };
 
-
+function resetWins() {
+  localStorage.clear();
+  location.reload();
+};
 
 function showSelectedBuddies() {
   var humanBuddy = document.querySelector(`#${game.human.buddy}`);

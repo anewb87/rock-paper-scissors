@@ -12,7 +12,7 @@ body {
 
 .titles,
 .button-spacing {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 /* ~~~~~~~~~~ MAIN VIEW - SIDES ~~~~~~~~~~~~ */
@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .game-button {
@@ -50,7 +50,7 @@ body {
   color: #ECB983;
   background-color: white;
   width: 400px;
-  height: 250px;
+  height: 240px;
   border: 0;
   margin-bottom: 20px;
   font-size: 18px;
@@ -91,7 +91,8 @@ body {
 
 /* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
 
-.change-game-button {
+.change-game-button,
+.reset-wins-button {
   cursor: pointer;
   background-color: #ECB983;
   border: 0;
@@ -100,7 +101,13 @@ body {
   margin-top: 70px;
 }
 
-.change-game-button:hover {
+.reset-wins-button {
+  background-color: #D48258;
+  margin-top: 0px;
+}
+
+.change-game-button:hover,
+.reset-wins-button:hover {
   cursor:pointer;
   background-color: white;
   color: #ECB983;
