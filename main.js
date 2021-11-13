@@ -31,6 +31,7 @@ function play(e){
   if (e.target.classList.contains("buddy-button-image")) {
     game.playGame(e.target.id)
   }
+  show(e.target.nextElementSibling)
   message.innerText = game.message;
   humanWins.innerText = `Wins: ${game.human.wins}`;
   computerWins.innerText = `Wins: ${game.computer.wins}`;
@@ -75,6 +76,8 @@ function displayBeastGame() {
   hide(selectGameView);
   show(gameView);
   show(changeGameBtn);
+  show(bike);
+  show(brunch)
   game.type = "beast"
   message.innerText = "choose your bestest buddy"
   console.log(game)
@@ -86,6 +89,7 @@ function displayHome() {
   hide(brunch);
   hide(changeGameBtn);
   show(selectGameView);
+
   message.innerText = "choose your game"
 };
 
