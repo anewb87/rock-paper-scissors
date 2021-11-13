@@ -6,22 +6,28 @@ var gameView = document.querySelector(".select-buddy-section")
 var bike = document.querySelector(".bike")
 var brunch = document.querySelector(".brunch")
 var changeGameBtn = document.querySelector(".change-game-button")
+var humanBearSelection =document.querySelector(".bear")
 
 
 basicBtn.addEventListener("click", displayBasicGame)
 beastBtn.addEventListener("click", displayBeastGame)
 changeGameBtn.addEventListener("click", displayHome)
 gameView.addEventListener("click", function(e){
-  playGame(e)
+  play(e)
 });
 
 window.onload = hide(gameView)
 
-function playGame(e){
+function play(e){
   if (e.target.classList.contains('buddy-button-image')) {
     game.playGame(e.target.id)
   }
 };
+
+// show(humanBearSelection)
+// function revealHumanSelection() {
+//
+// }
 
 function displayBasicGame() {
   hide(selectGameView);
