@@ -16,22 +16,22 @@ var message = document.querySelector("h5");
 var humanToken = document.querySelector(".human-token");
 var humanPlayer = document.querySelector(".human-player");
 var humanWins = document.querySelector(".human-wins");
-var computerToken = document.querySelector(".computer-token")
-var computerPlayer = document.querySelector(".computer-player")
+var computerToken = document.querySelector(".computer-token");
+var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
-var humanBearSelection =document.querySelector(".bear")
+var humanBearSelection =document.querySelector(".bear");
 
 
 
-basicBtn.addEventListener("click", displayBasicGame)
-beastBtn.addEventListener("click", displayBeastGame)
-changeGameBtn.addEventListener("click", displayHome)
+basicBtn.addEventListener("click", displayBasicGame);
+beastBtn.addEventListener("click", displayBeastGame);
+changeGameBtn.addEventListener("click", displayHome);
 gameView.addEventListener("click", function(e){
   playGame(e)
 });
 
-onload = hide(gameView)
-onload = updatePlayerInfoOnLoad()
+onload = hide(gameView);
+onload = updatePlayerInfoOnLoad();
 
 
 function updatePlayerInfoOnLoad() {
@@ -40,34 +40,34 @@ function updatePlayerInfoOnLoad() {
   computerToken.innerText = game.computer.token;
   humanPlayer.innerText = game.human.name;
   computerPlayer.innerText = game.computer.name;
-  updateWinCount()
-}
+  updateWinCount();
+};
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
-    game.determineWinner(e.target.id)
+    game.determineWinner(e.target.id);
   }
-  show(e.target.nextElementSibling)
+  show(e.target.nextElementSibling);
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
   game.human.saveWinsToStorage();
-  game.computer.saveWinsToStorage()
+  game.computer.saveWinsToStorage();
 };
 
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
   computerWins.innerText = game.computer.retrieveWinsFromStorage() || 0
-}
+};
 
 
 
 function showSelectedBuddies() {
-  var humanBuddy = document.querySelector(`#${game.human.buddy}`)
-  var computerBuddy = document.querySelector(`#${game.computer.buddy}`)
+  var humanBuddy = document.querySelector(`#${game.human.buddy}`);
+  var computerBuddy = document.querySelector(`#${game.computer.buddy}`);
   hide(gameView);
-  selectedBuddiesSection.appendChild(humanBuddy)
+  selectedBuddiesSection.appendChild(humanBuddy);
   // selectedBuddies.innerHTML = `
   //   <section>
   //     humanBuddy
@@ -87,7 +87,7 @@ function displayBasicGame() {
   show(gameView);
   show(changeGameBtn);
   game.type = "basic";
-  message.innerText = "choose your buddy"
+  message.innerText = "choose your buddy";
 
   console.log(game)
 };
@@ -97,9 +97,9 @@ function displayBeastGame() {
   show(gameView);
   show(changeGameBtn);
   show(bike);
-  show(brunch)
-  game.type = "beast"
-  message.innerText = "choose your bestest buddy"
+  show(brunch);
+  game.type = "beast";
+  message.innerText = "choose your bestest buddy";
   console.log(game)
 };
 
@@ -109,7 +109,7 @@ function displayHome() {
   hide(brunch);
   hide(changeGameBtn);
   show(selectGameView);
-  message.innerText = "choose your game"
+  message.innerText = "choose your game";
 };
 
 function show(element) {
@@ -117,7 +117,7 @@ function show(element) {
 };
 
 function hide(element) {
-    element.classList.add("hidden")
+    element.classList.add("hidden");
 };
 
 

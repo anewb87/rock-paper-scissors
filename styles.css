@@ -1,4 +1,4 @@
-/* ~~~~~~~~~~~~~ BASIC ELEMENTS ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ BASIC ELEMENTS ~~~~~~~~~~~~ */
 
 * {
   font-family: 'Arvo', serif;
@@ -15,11 +15,7 @@ body {
   margin-top: 40px;
 }
 
-/* .button-spacing {
-  margin-top: 30px;
-} */
-
-/* ~~~~~~~~~~~~~ MAIN VIEW EDGE AREAS ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ MAIN VIEW - SIDES ~~~~~~~~~~~~ */
 
 .side-bar {
   width: 20%;
@@ -30,14 +26,9 @@ body {
 
 .button-images {
   max-width: 25px;
-  /* max-height: inherit; */
 }
 
-.player-tokens {
-  font-size: 50px;
-}
-
-/* ~~~~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~ */
 
 .game-board-section {
   width: 60%;
@@ -60,7 +51,7 @@ body {
   background-color: white;
   width: 400px;
   height: 250px;
-  border: none;
+  border: 0;
   margin-bottom: 20px;
   font-size: 18px;
 }
@@ -70,7 +61,7 @@ body {
   color: black;
 }
 
-/* ~~~~~~~~~~~~~ GAME PLAY AREA 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ GAME PLAY AREA: 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~ */
 
 .select-buddy-section {
   margin-top: 70px;
@@ -81,7 +72,7 @@ body {
 }
 
 .buddy-buttons {
-  border: none;
+  border: 0;
   max-height: 150px;
 }
 
@@ -98,14 +89,12 @@ body {
   font-size: 30px;
 }
 
-
-
-/* ~~~~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
 
 .change-game-button {
   cursor: pointer;
   background-color: #ECB983;
-  border: none;
+  border: 0;
   width: 150px;
   height: 50px;
   margin-top: 70px;
@@ -114,11 +103,10 @@ body {
 .change-game-button:hover {
   cursor:pointer;
   background-color: white;
-  color: #ECB983
+  color: #ECB983;
 }
 
-
-/* ~~~~~~~~~~~~~ HIDDEN ~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ HIDDEN ~~~~~~~~~~~~ */
 
 .hidden {
   display: none;
