@@ -27,11 +27,12 @@ basicBtn.addEventListener("click", displayBasicGame)
 beastBtn.addEventListener("click", displayBeastGame)
 changeGameBtn.addEventListener("click", displayHome)
 gameView.addEventListener("click", function(e){
-  play(e)
+  playGame(e)
 });
 
-window.onload = hide(gameView)
-window.onload = updatePlayerInfoOnLoad()
+onload = hide(gameView)
+onload = updatePlayerInfoOnLoad()
+
 
 function updatePlayerInfoOnLoad() {
   message.innerText = game.message;
@@ -40,28 +41,22 @@ function updatePlayerInfoOnLoad() {
   humanPlayer.innerText = game.human.name;
   computerPlayer.innerText = game.computer.name;
   updateWinCount()
-
-  // game.this.human.retrieveWinsFromStorage();
-  // game.this.computer.retrieveWinsFromStorage();
 }
 
-function play(e){
+function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
-    game.playGame(e.target.id)
+    game.determineWinner(e.target.id)
   }
   show(e.target.nextElementSibling)
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
-  game.human.saveWinsToStorage()
+  game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage()
 };
 
 
 function updateWinCount() {
-  // game.human.retrieveWinsFromStorage() || 0;
-  // game.computer.retrieveWinsFromStorage() || 0;
-  // console.log(game.computer.retrieveWinsFromStorage())
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
   computerWins.innerText = game.computer.retrieveWinsFromStorage() || 0
 }
@@ -114,7 +109,6 @@ function displayHome() {
   hide(brunch);
   hide(changeGameBtn);
   show(selectGameView);
-
   message.innerText = "choose your game"
 };
 

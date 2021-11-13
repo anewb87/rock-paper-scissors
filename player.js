@@ -7,21 +7,11 @@ class Player {
   }
 
   saveWinsToStorage() {
-    console.log('work please')
-    localStorage.setItem(`${this.name}Wins`, JSON.stringify(this.wins));
+    localStorage.setItem(`${this.name}Wins`, `${this.wins}`);
   }
 
-  // saveWinsToStorage() {
-  //   console.log('work please')
-  //   localStorage.setItem(`${this.name}Wins`, `${this.wins}`)
-  // }
-
-  // retrieveWinsFromStorage() {
-  //   localStorage.getItem(`${this.name}Wins`)
-  // }
-
   retrieveWinsFromStorage() {
-    return JSON.parse(localStorage.getItem(`${this.name}Wins`))
+    return (localStorage.getItem(`${this.name}Wins`))
   }
 
   takeTurn(buddy) {

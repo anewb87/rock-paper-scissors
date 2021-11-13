@@ -6,7 +6,7 @@ class Game {
     this.type = type;
   }
 
-  playGame(buddy) {
+  determineWinner(buddy) {
     this.human.takeTurn(buddy);
     this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
