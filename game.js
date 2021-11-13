@@ -12,22 +12,14 @@ class Game {
     //go to the main view of the specific board
   }
 
-  determineGame(buddy) {
-    this.message = 'Choose your buddy!'
-    if (this.type === 'basic') {
-      this.playBasicGame(buddy)
-    } else {
-      this.playBeastGame(buddy)
-    }
-  }
-
-  playBasicGame(buddy) {
-    this.human.takeTurnBasic(buddy);
-    this.computer.takeTurnBasic();
+  playGame(buddy) {
+    this.human.takeTurns(buddy);
+    this.computer.takeTurns();
     if (this.human.buddy === this.computer.buddy) {
       this.message = "😑 Twin Buddies! It's a Tie! 😑"
       console.log(this.message)
     } else if (this.humanWins()) {
+      this.human.wins ++;
       this.message = "😄 Human's Buddy for the Win! 😄"
       console.log(this.message)
     } else {
@@ -37,23 +29,6 @@ class Game {
     }
   }
 
-  playBeastGame(buddy) {
-    this.human.takeTurnBasic(buddy);
-    this.computer.takeTurnBasic();
-    if (this.human.buddy === this.computer.buddy) {
-      this.message = "😑 Twin Buddies! It's a Tie! 😑"
-      console.log(this.message)
-    } else if (this.humanWins()) {
-      this.human.wins ++
-      this.message = "😄 Human's Buddy for the Win! 😄"
-      console.log(this.message)
-    } else {
-      this.computer.wins ++;
-      this.message = "💻 Computer's Buddy for the Win! 💻"
-      console.log(this.message)
-    }
-  }
-  
   humanWins(){
     if (this.human.buddy === 'bear' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) {
       return true
@@ -65,10 +40,10 @@ class Game {
       return true
     } else if (this.human.buddy === 'brunch' && (this.computer.buddy === 'bike' || this.computer.buddy === 'bee')) {
       return true
+    } else {
+      return false
     }
-    return false
   }
-
 };
 
 
@@ -84,8 +59,3 @@ class Game {
 //   done-A way to detect when a game is a draw (no one has won)
 
 //   A way to reset the Game’s board to begin a new game
-
-
-//Game logic:
-//tie if buddies are the same
-//human wins if
