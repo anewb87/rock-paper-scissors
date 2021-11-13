@@ -82,6 +82,7 @@ body {
 
 .buddy-buttons {
   border: none;
+  max-height: 150px;
 }
 
 .buddy-buttons:hover {
