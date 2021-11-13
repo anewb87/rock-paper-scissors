@@ -11,7 +11,8 @@ class Player {
   }
 
   retrieveWinsFromStorage() {
-    return (localStorage.getItem(`${this.name}Wins`))
+    this.wins = (localStorage.getItem(`${this.name}Wins`)) || 0
+    return this.wins
   }
 
   takeTurn(buddy) {
