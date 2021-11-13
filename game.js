@@ -13,8 +13,8 @@ class Game {
   }
 
   playGame(buddy) {
-    this.human.takeTurns(buddy);
-    this.computer.takeTurns();
+    this.human.takeTurn(buddy);
+    this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
       this.message = "😑 Twin Buddies! It's a Tie! 😑"
       console.log(this.message)

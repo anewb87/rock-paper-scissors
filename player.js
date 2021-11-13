@@ -14,7 +14,7 @@ class Player {
     //localStorage.getItem()
   }
 
-  takeTurns(buddy) {
+  takeTurn(buddy) {
     var buddies = ['brunch', 'bike', 'bear', 'bee', 'bowling'];
     if (buddy) {
       this.buddy = buddy
