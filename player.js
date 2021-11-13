@@ -7,11 +7,18 @@ class Player {
   }
 
   saveWinsToStorage() {
-    //localStorage.setItem()
+    console.log('work please')
+    localStorage.setItem(`${this.name}Wins`, `${this.wins}`)
   }
+//
+//
+//
+// function parseData() {
+//   localStorage.getItem(`${this.name}Wins`));
+// };
 
   retrieveWinsFromStorage() {
-    //localStorage.getItem()
+    localStorage.getItem(`${this.name}Wins`)
   }
 
   takeTurn(buddy) {

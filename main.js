@@ -39,8 +39,10 @@ function updatePlayerInfoOnLoad() {
   computerToken.innerText = game.computer.token;
   humanPlayer.innerText = game.human.name;
   computerPlayer.innerText = game.computer.name;
-  humanWins.innerText = game.human.wins;
-  computerWins.innerText = game.computer.wins;
+  updateWinCount()
+
+  // game.this.human.retrieveWinsFromStorage();
+  // game.this.computer.retrieveWinsFromStorage();
 }
 
 function play(e){
@@ -51,7 +53,18 @@ function play(e){
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
+  game.human.saveWinsToStorage()
+  game.computer.saveWinsToStorage()
 };
+
+
+function updateWinCount() {
+  game.human.retrieveWinsFromStorage() || 0;
+  game.computer.retrieveWinsFromStorage() || 0;
+  humanWins.innerText = game.human.wins;
+  computerWins.innerText = game.computer.wins;
+}
+
 
 
 function showSelectedBuddies() {
