@@ -9,7 +9,7 @@ var bike = document.querySelector(".bike");
 var brunch = document.querySelector(".brunch");
 
 //line 11 below is a query select for the currently empty section in which to put the selected buddies to 'face-off' for the game
-//var selectedBuddiesSection = document.querySelectorAll(".selected-buddies-section");
+var fightView = document.querySelectorAll(".fight-section");
 
 
 //These are the query selectors for the info displayed on the DOM on page load that is updated from the data model. Is it better to have the space in the HTML already and query select, as I've done here, or is it better to simply NOT have it in the HTML and do some .innerHTML on page load?
@@ -20,7 +20,7 @@ var humanWins = document.querySelector(".human-wins");
 var computerToken = document.querySelector(".computer-token");
 var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
-var humanBearSelection =document.querySelector(".bear");
+// var humanBearSelection =document.querySelector(".bear");
 
 
 
@@ -68,19 +68,20 @@ function resetWins() {
   location.reload();
 };
 
-function showSelectedBuddies() {
+function showFight() {
   var humanBuddy = document.querySelector(`#${game.human.buddy}`);
   var computerBuddy = document.querySelector(`#${game.computer.buddy}`);
   hide(gameView);
-  selectedBuddiesSection.appendChild(humanBuddy);
-  // selectedBuddies.innerHTML = `
+  show(fightView)
+  fightView.appendChild(humanBuddy);
+  // fightView.innerHTML = `
   //   <section>
   //     humanBuddy
   //     computerBuddy
   //   </section>`
   // show(humanBuddy);
   // show(computerBuddy);
-  //not working, look up append tomorrow
+  //
 }
 
 
@@ -101,8 +102,8 @@ function displayBeastGame() {
   hide(selectGameView);
   show(gameView);
   show(changeGameBtn);
-  show(bike);
-  show(brunch);
+  // show(bike);
+  // show(brunch);
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
   console.log(game)
