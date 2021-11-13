@@ -8,17 +8,20 @@ class Player {
 
   saveWinsToStorage() {
     console.log('work please')
-    localStorage.setItem(`${this.name}Wins`, `${this.wins}`)
+    localStorage.setItem(`${this.name}Wins`, JSON.stringify(this.wins));
   }
-//
-//
-//
-// function parseData() {
-//   localStorage.getItem(`${this.name}Wins`));
-// };
+
+  // saveWinsToStorage() {
+  //   console.log('work please')
+  //   localStorage.setItem(`${this.name}Wins`, `${this.wins}`)
+  // }
+
+  // retrieveWinsFromStorage() {
+  //   localStorage.getItem(`${this.name}Wins`)
+  // }
 
   retrieveWinsFromStorage() {
-    localStorage.getItem(`${this.name}Wins`)
+    return JSON.parse(localStorage.getItem(`${this.name}Wins`))
   }
 
   takeTurn(buddy) {

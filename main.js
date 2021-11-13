@@ -59,10 +59,11 @@ function play(e){
 
 
 function updateWinCount() {
-  game.human.retrieveWinsFromStorage() || 0;
-  game.computer.retrieveWinsFromStorage() || 0;
-  humanWins.innerText = game.human.wins;
-  computerWins.innerText = game.computer.wins;
+  // game.human.retrieveWinsFromStorage() || 0;
+  // game.computer.retrieveWinsFromStorage() || 0;
+  // console.log(game.computer.retrieveWinsFromStorage())
+  humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
+  computerWins.innerText = game.computer.retrieveWinsFromStorage() || 0
 }
 
 
