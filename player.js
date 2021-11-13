@@ -7,11 +7,11 @@ class Player {
   }
 
   saveWinsToStorage() {
-    //localStorage.setItem()
+    localStorage.setItem(`${this.name}Wins`, `${this.wins}`);
   }
 
   retrieveWinsFromStorage() {
-    //localStorage.getItem()
+    return (localStorage.getItem(`${this.name}Wins`))
   }
 
   takeTurn(buddy) {

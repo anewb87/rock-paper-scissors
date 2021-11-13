@@ -4,10 +4,9 @@ class Game {
     this.computer = new Player ('Computer', '💻')
     this.message = 'choose your game'
     this.type = type;
-    //game must time out
   }
 
-  playGame(buddy) {
+  determineWinner(buddy) {
     this.human.takeTurn(buddy);
     this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
@@ -22,6 +21,7 @@ class Game {
       this.message = "💻 Computer's Buddy for the Win! 💻"
       console.log(this.message)
     }
+    // setTimeOut()
   }
 
   humanWins(){
@@ -40,9 +40,13 @@ class Game {
     }
   }
 
-  resetGameBoard() {
+  setTimeOut() {
     //set timeout function;
     //go to the main view of the specific board
+
+  }
+  resetGameBoard() {
+    //clear local storage on button click
   }
 };
 
