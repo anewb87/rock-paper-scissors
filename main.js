@@ -18,7 +18,9 @@ gameView.addEventListener("click", function(e){
 window.onload = hide(gameView)
 
 function playGame(e){
-  game.determineGame(e.target.alt)
+  if (e.target.classList.contains('buddy-button-image')) {
+    game.playGame(e.target.id)
+  }
 };
 
 function displayBasicGame() {
