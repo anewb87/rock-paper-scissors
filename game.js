@@ -39,12 +39,8 @@ class Game {
     }
   }
 
-  setTimeOut() {
-
-
-  }
-  resetGameBoard() {
-    //clear local storage on button click
+  timeout(view) {
+    setTimeout(view, 1500)
   }
 };
 

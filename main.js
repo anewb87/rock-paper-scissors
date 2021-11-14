@@ -21,7 +21,6 @@ var humanWins = document.querySelector(".human-wins");
 var computerToken = document.querySelector(".computer-token");
 var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
-// var humanBearSelection =document.querySelector(".bear");
 
 
 
@@ -58,8 +57,7 @@ function playGame(e){
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
   showFight();
-  
-  //
+  game.timeout(displayHome);
 };
 
 function updateWinCount() {
@@ -76,7 +74,6 @@ function showFight() {
   hide(gameView);
   show(fightView)
   viewFighters();
-  //I think timeout should be at work in here game.setTimeOut()
 };
 
 function viewFighters() {
@@ -93,8 +90,7 @@ function displayBasicGame() {
   show(changeGameBtn);
   game.type = "basic";
   message.innerText = "choose your buddy";
-
-  console.log(game)
+  //console.log(game)
 };
 
 function displayBeastGame() {
