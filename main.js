@@ -47,17 +47,19 @@ function updatePlayerInfoOnLoad() {
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
+    var createToken = document.createElement("p")
+    createToken.classList.add("human-token")
+    e.target.parentNode.append(createToken)
+    createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
-  show(e.target.nextElementSibling);
-  //function above shows the token- need to fix because too fast to see
+  setTimeout(showFight, 500);
+  setTimeout(resetGame, 2000);
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
-  showFight();
-  game.timeout(resetGame);
 };
 
 function updateWinCount() {

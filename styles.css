@@ -28,7 +28,7 @@ body {
   max-width: 25px;
 }
 
-/* ~~~~~~~~~~ GAME PLAY AREA 'HOME' VIEW ~~~~~~~~~~ */
+/* ~~~~~~~~~~ 'HOME' VIEW ~~~~~~~~~~ */
 
 .game-board-section {
   width: 60%;
@@ -61,7 +61,7 @@ body {
   color: black;
 }
 
-/* ~~~~~~~~~~ GAME PLAY AREA: 'CHOOSE PLAYER' VIEW ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ GAME PLAY AREA: CHOOSE PLAYER VIEW ~~~~~~~~~~~~ */
 
 .select-buddy-section {
   margin-top: 70px;
@@ -86,15 +86,15 @@ body {
   max-width: 150px;
 }
 
-.player-token {
+.human-token {
   font-size: 30px;
 }
+
+/* ~~~~~~~~~~ GAME PLAY / FACE-OFF VIEW ~~~~~~~~~~~~ */
 
 .fight-section {
   margin-top: 70px;
 }
-
-/* ~~~~~~~~~~ GAME PLAY / FACE-OFF VIEW ~~~~~~~~~~~~ */
 
 .fighter-icons {
   background-color: white;
@@ -102,7 +102,6 @@ body {
   padding: 5px;
   margin: 10px;
 }
-
 
 /* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
 
