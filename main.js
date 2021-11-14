@@ -8,9 +8,10 @@ var gameView = document.querySelector(".select-buddy-section");
 var bike = document.querySelector(".bike");
 var brunch = document.querySelector(".brunch");
 
-//line 11 below is a query select for the currently empty section in which to put the selected buddies to 'face-off' for the game
-//var selectedBuddiesSection = document.querySelectorAll(".selected-buddies-section");
+var fightView = document.querySelector(".fight-section");
 
+var humanFighter = document.querySelector("#humanFighter");
+var computerFighter = document.querySelector("#computerFighter");
 
 //These are the query selectors for the info displayed on the DOM on page load that is updated from the data model. Is it better to have the space in the HTML already and query select, as I've done here, or is it better to simply NOT have it in the HTML and do some .innerHTML on page load?
 var message = document.querySelector("h5");
@@ -20,7 +21,7 @@ var humanWins = document.querySelector(".human-wins");
 var computerToken = document.querySelector(".computer-token");
 var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
-var humanBearSelection =document.querySelector(".bear");
+// var humanBearSelection =document.querySelector(".bear");
 
 
 
@@ -50,13 +51,16 @@ function playGame(e){
     game.determineWinner(e.target.id);
   }
   show(e.target.nextElementSibling);
+  //function above shows the token- need to fix because too fast to see
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
+  showFight();
+  
+  //
 };
-
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
@@ -68,21 +72,17 @@ function resetWins() {
   location.reload();
 };
 
-function showSelectedBuddies() {
-  var humanBuddy = document.querySelector(`#${game.human.buddy}`);
-  var computerBuddy = document.querySelector(`#${game.computer.buddy}`);
+function showFight() {
   hide(gameView);
-  selectedBuddiesSection.appendChild(humanBuddy);
-  // selectedBuddies.innerHTML = `
-  //   <section>
-  //     humanBuddy
-  //     computerBuddy
-  //   </section>`
-  // show(humanBuddy);
-  // show(computerBuddy);
-  //not working, look up append tomorrow
-}
+  show(fightView)
+  viewFighters();
+  //I think timeout should be at work in here game.setTimeOut()
+};
 
+function viewFighters() {
+  humanFighter.src = `./assets/${game.human.buddy}.png`;
+  computerFighter.src = `./assets/${game.computer.buddy}.png`;
+};
 
 
 function displayBasicGame() {
@@ -113,6 +113,7 @@ function displayHome() {
   hide(bike);
   hide(brunch);
   hide(changeGameBtn);
+  hide(fightView);
   show(selectGameView);
   message.innerText = "choose your game";
 };
@@ -124,6 +125,22 @@ function show(element) {
 function hide(element) {
     element.classList.add("hidden");
 };
+
+
+
+//Wow. Hannah for the win with this feedback. Amazing. Also like 'aha! of course!' moment.
+//Will use to refactor
+// function hide(elements) {
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].classList.add('hidden');
+//   }
+// }
+//
+// function show(elements) {
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].classList.remove('hidden');
+//   }
+// }
 
 
 //dont forget to set timout- might not belong here, need to thing through

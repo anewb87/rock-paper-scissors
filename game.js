@@ -21,9 +21,8 @@ class Game {
       this.message = "💻 Computer's Buddy for the Win! 💻";
       console.log(this.message)
     }
-    // setTimeOut()
-  }
 
+  }
   humanWins(){
     if (this.human.buddy === "bear" && (this.computer.buddy === "bowling" || this.computer.buddy === "brunch")) {
       return true;
@@ -41,8 +40,7 @@ class Game {
   }
 
   setTimeOut() {
-    //set timeout function;
-    //go to the main view of the specific board
+
 
   }
   resetGameBoard() {
