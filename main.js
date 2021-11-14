@@ -8,7 +8,6 @@ var gameView = document.querySelector(".select-buddy-section");
 var bike = document.querySelector(".bike");
 var brunch = document.querySelector(".brunch");
 
-//line 11 below is a query select for the currently empty section in which to put the selected buddies to 'face-off' for the game
 var fightView = document.querySelector(".fight-section");
 
 var humanFighter = document.querySelector("#humanFighter");
@@ -52,12 +51,15 @@ function playGame(e){
     game.determineWinner(e.target.id);
   }
   show(e.target.nextElementSibling);
+  //function above shows the token- need to fix because too fast to see
   message.innerText = game.message;
   humanWins.innerText = `${game.human.wins}`;
   computerWins.innerText = `${game.computer.wins}`;
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
   showFight();
+  
+  //
 };
 
 function updateWinCount() {
@@ -72,30 +74,9 @@ function resetWins() {
 
 function showFight() {
   hide(gameView);
+  show(fightView)
   viewFighters();
-  // var humanBuddy = document.querySelector(`#${game.human.buddy}`);
-  // var computerBuddy = document.querySelector(`#${game.computer.buddy}`);
-
-  //show(fightView);
-  
-
-
-
-
-
-  // fightView.innerHTML = `
-  //   <p>Will anything happen?</p>
-  // `
-
-  // fightView.appendChild(humanBuddy);
-  // fightView.innerHTML = `
-  //   <section>
-  //     humanBuddy
-  //     computerBuddy
-  //   </section>`
-  // show(humanBuddy);
-  // show(computerBuddy);
-  //
+  //I think timeout should be at work in here game.setTimeOut()
 };
 
 function viewFighters() {
@@ -132,6 +113,7 @@ function displayHome() {
   hide(bike);
   hide(brunch);
   hide(changeGameBtn);
+  hide(fightView);
   show(selectGameView);
   message.innerText = "choose your game";
 };

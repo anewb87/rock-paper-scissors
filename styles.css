@@ -81,6 +81,7 @@ body {
   background-color: #D48258;
 }
 
+
 .buddy-button-image {
   max-width: 150px;
 }
@@ -92,6 +93,16 @@ body {
 .fight-section {
   margin-top: 70px;
 }
+
+/* ~~~~~~~~~~ GAME PLAY / FACE-OFF VIEW ~~~~~~~~~~~~ */
+
+.fighter-icons {
+  background-color: white;
+  max-width: 150px;
+  padding: 5px;
+  margin: 10px;
+}
+
 
 /* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
 
