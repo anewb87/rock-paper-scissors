@@ -89,6 +89,10 @@ body {
   font-size: 30px;
 }
 
+.fight-section {
+  margin-top: 70px;
+}
+
 /* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
 
 .change-game-button,

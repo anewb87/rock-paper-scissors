@@ -55,8 +55,8 @@ function playGame(e){
   computerWins.innerText = `${game.computer.wins}`;
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
+  showFight();
 };
-
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
@@ -72,8 +72,13 @@ function showFight() {
   var humanBuddy = document.querySelector(`#${game.human.buddy}`);
   var computerBuddy = document.querySelector(`#${game.computer.buddy}`);
   hide(gameView);
-  show(fightView)
-  fightView.appendChild(humanBuddy);
+  //show(fightView);
+
+  fightView.innerHTML = `
+    <p>Will anything happen?</p>
+  `
+
+  // fightView.appendChild(humanBuddy);
   // fightView.innerHTML = `
   //   <section>
   //     humanBuddy
@@ -84,7 +89,7 @@ function showFight() {
   //
 }
 
-
+event.target.id
 
 function displayBasicGame() {
   hide(selectGameView);
@@ -102,8 +107,8 @@ function displayBeastGame() {
   hide(selectGameView);
   show(gameView);
   show(changeGameBtn);
-  // show(bike);
-  // show(brunch);
+  show(bike);
+  show(brunch);
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
   console.log(game)
@@ -125,6 +130,22 @@ function show(element) {
 function hide(element) {
     element.classList.add("hidden");
 };
+
+
+
+//Wow. Hannah for the win with this feedback. Amazing. Also like 'aha! of course!' moment.
+//Will use to refactor
+// function hide(elements) {
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].classList.add('hidden');
+//   }
+// }
+//
+// function show(elements) {
+//   for (var i = 0; i < elements.length; i++) {
+//     elements[i].classList.remove('hidden');
+//   }
+// }
 
 
 //dont forget to set timout- might not belong here, need to thing through
