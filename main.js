@@ -22,7 +22,7 @@ var computerToken = document.querySelector(".computer-token");
 var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
 
-
+var createToken = document.createElement("p")
 
 basicBtn.addEventListener("click", displayBasicGame);
 beastBtn.addEventListener("click", displayBeastGame);
@@ -47,19 +47,14 @@ function updatePlayerInfoOnLoad() {
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
-    var createToken = document.createElement("p")
     createToken.classList.add("human-token")
     e.target.parentNode.append(createToken)
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
-  setTimeout(showFight, 500);
-  setTimeout(resetGame, 2000);
-  message.innerText = game.message;
-  humanWins.innerText = `${game.human.wins}`;
-  computerWins.innerText = `${game.computer.wins}`;
-  game.human.saveWinsToStorage();
-  game.computer.saveWinsToStorage();
+  setTimeout(showFight, 600);
+  setTimeout(displayUpdatedInfo, 600);
+  setTimeout(resetGame, 2400);
 };
 
 function updateWinCount() {
@@ -74,11 +69,12 @@ function resetWins() {
 
 function resetGame() {
   if (game.type === "beast") {
-    displayBeastGame()
+    displayBeastGame();
   } else {
-    displayBasicGame()
+    displayBasicGame();
   }
-}
+  createToken.remove();
+};
 
 function showFight() {
   hide(gameView);
@@ -91,13 +87,21 @@ function viewFighters() {
   computerFighter.src = `./assets/${game.computer.buddy}.png`;
 };
 
+function displayUpdatedInfo() {
+  message.innerText = game.message;
+  humanWins.innerText = `${game.human.wins}`;
+  computerWins.innerText = `${game.computer.wins}`;
+  game.human.saveWinsToStorage();
+  game.computer.saveWinsToStorage();
+};
+
 function displayBasicGame() {
   hide(selectGameView);
   hide(bike);
   hide(brunch);
   show(gameView);
   show(changeGameBtn);
-  hide(fightView)
+  hide(fightView);
   game.type = "basic";
   message.innerText = "choose your buddy";
   //console.log(game)
@@ -109,7 +113,7 @@ function displayBeastGame() {
   show(changeGameBtn);
   show(bike);
   show(brunch);
-  hide(fightView)
+  hide(fightView);
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
   console.log(game)
