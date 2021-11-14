@@ -57,7 +57,7 @@ function playGame(e){
   game.human.saveWinsToStorage();
   game.computer.saveWinsToStorage();
   showFight();
-  game.timeout(displayHome);
+  game.timeout(resetGame);
 };
 
 function updateWinCount() {
@@ -70,6 +70,14 @@ function resetWins() {
   location.reload();
 };
 
+function resetGame() {
+  if (game.type === "beast") {
+    displayBeastGame()
+  } else {
+    displayBasicGame()
+  }
+}
+
 function showFight() {
   hide(gameView);
   show(fightView)
@@ -81,13 +89,13 @@ function viewFighters() {
   computerFighter.src = `./assets/${game.computer.buddy}.png`;
 };
 
-
 function displayBasicGame() {
   hide(selectGameView);
   hide(bike);
   hide(brunch);
   show(gameView);
   show(changeGameBtn);
+  hide(fightView)
   game.type = "basic";
   message.innerText = "choose your buddy";
   //console.log(game)
@@ -99,6 +107,7 @@ function displayBeastGame() {
   show(changeGameBtn);
   show(bike);
   show(brunch);
+  hide(fightView)
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
   console.log(game)
@@ -109,7 +118,6 @@ function displayHome() {
   hide(bike);
   hide(brunch);
   hide(changeGameBtn);
-  hide(fightView);
   show(selectGameView);
   message.innerText = "choose your game";
 };

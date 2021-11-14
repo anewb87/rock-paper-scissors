@@ -40,8 +40,9 @@ class Game {
   }
 
   timeout(view) {
-    setTimeout(view, 1500)
+    setTimeout(view, 2000)
   }
+
 };
 
 
