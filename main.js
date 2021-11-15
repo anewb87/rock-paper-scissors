@@ -34,10 +34,23 @@ function playGame(e){
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
+  disableChangeGameBtn();
   setTimeout(showFight, 700);
   setTimeout(displayUpdatedInfo, 700);
   setTimeout(resetGame, 2800);
 };
+
+function disableChangeGameBtn() {
+    changeGameBtn.classList.add("disabled-button");
+    changeGameBtn.classList.add("disabled-button:hover")
+    changeGameBtn.disabled = true;
+};
+
+function enableChangeGameBtn() {
+  changeGameBtn.classList.remove("disabled-button");
+  changeGameBtn.classList.remove("disabled-button:hover")
+  changeGameBtn.disabled = false;
+}
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
@@ -56,6 +69,7 @@ function resetGame() {
     displayBasicGame();
   }
   createToken.remove();
+  enableChangeGameBtn();
 };
 
 function showFight() {

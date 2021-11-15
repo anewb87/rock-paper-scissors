@@ -81,7 +81,6 @@ body {
   background-color: #D48258;
 }
 
-
 .buddy-button-image {
   max-width: 150px;
 }
@@ -125,6 +124,17 @@ body {
   cursor:pointer;
   background-color: white;
   color: #ECB983;
+}
+
+.disabled-button {
+  background-color: #DCDCDC;
+  color: #A9A9A9;
+}
+
+.disabled-button:hover {
+  cursor:not-allowed;
+  background-color: #DCDCDC;
+  color: #A9A9A9;
 }
 
 /* ~~~~~~~~~~ HIDDEN ~~~~~~~~~~~~ */
