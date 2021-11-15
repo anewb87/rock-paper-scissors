@@ -54,8 +54,10 @@ function playGame(e){
   }
   setTimeout(showFight, 600);
   setTimeout(displayUpdatedInfo, 600);
-  setTimeout(resetGame, 3000);
+  setTimeout(game.resetGame, 2700);
 };
+
+//Added the game. to this function above when the fuction resetGame (lines 72-79) is moved into the game.js. This doesn't make any sense to me to have it in the Game class but that's what the project prompt instructs. Will be asking about this tomorrow (Monday).
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
@@ -67,14 +69,14 @@ function resetWins() {
   location.reload();
 };
 
-function resetGame() {
-  if (game.type === "beast") {
-    displayBeastGame();
-  } else {
-    displayBasicGame();
-  }
-  createToken.remove();
-};
+// function resetGame() {
+//   if (game.type === "beast") {
+//     displayBeastGame();
+//   } else {
+//     displayBasicGame();
+//   }
+//   createToken.remove();
+// };
 
 function showFight() {
   hide(gameView);
