@@ -2,7 +2,7 @@ class Game {
   constructor(type) {
     this.human = new Player("Human", "😄");
     this.computer = new Player ("Computer", "💻");
-    this.message
+    this.message = null;
     this.type = type;
   }
 
@@ -34,14 +34,5 @@ class Game {
     } else {
       return false;
     }
-  }
-
-  resetGame() {
-    if (game.type === "beast") {
-      displayBeastGame();
-    } else {
-      displayBasicGame();
-    }
-    createToken.remove();
   }
 };
