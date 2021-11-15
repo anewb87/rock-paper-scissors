@@ -39,8 +39,12 @@ class Game {
     }
   }
 
-  timeout(view) {
-    setTimeout(view, 2000)
+  resetGame() {
+    if (game.type === "beast") {
+      displayBeastGame();
+    } else {
+      displayBasicGame();
+    }
+    createToken.remove();
   }
-
 };
