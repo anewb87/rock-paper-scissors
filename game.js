@@ -2,7 +2,7 @@ class Game {
   constructor(type) {
     this.human = new Player("Human", "😄");
     this.computer = new Player ("Computer", "💻");
-    this.message = "choose your game"
+    this.message
     this.type = type;
   }
 
@@ -11,15 +11,12 @@ class Game {
     this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
       this.message = "😑 Awe, twins! But no one wins. 😑";
-      console.log(this.message)
     } else if (this.humanWins()) {
       this.human.wins ++;
       this.message = "😄 Your buddy is the best buddy! Human wins! 😄";
-      console.log(this.message)
     } else {
       this.computer.wins ++;
       this.message = "💻  Bummer! Computer wins. 💻";
-      console.log(this.message)
     }
   }
 

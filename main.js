@@ -5,23 +5,14 @@ var changeGameBtn = document.querySelector(".change-game-button");
 var resetWinsBtn = document.querySelector(".reset-wins-button");
 var selectGameView = document.querySelector(".select-game-section");
 var gameView = document.querySelector(".select-buddy-section");
+var fightView = document.querySelector(".fight-section");
 var bike = document.querySelector(".bike");
 var brunch = document.querySelector(".brunch");
-
-var fightView = document.querySelector(".fight-section");
-
 var humanFighter = document.querySelector("#humanFighter");
 var computerFighter = document.querySelector("#computerFighter");
-
-//These are the query selectors for the info displayed on the DOM on page load that is updated from the data model. Is it better to have the space in the HTML already and query select, as I've done here, or is it better to simply NOT have it in the HTML and do some .innerHTML on page load?
 var message = document.querySelector("h5");
-var humanToken = document.querySelector(".human-token");
-var humanPlayer = document.querySelector(".human-player");
 var humanWins = document.querySelector(".human-wins");
-var computerToken = document.querySelector(".computer-token");
-var computerPlayer = document.querySelector(".computer-player");
 var computerWins = document.querySelector(".computer-wins");
-
 var createToken = document.createElement("p")
 
 basicBtn.addEventListener("click", displayBasicGame);
@@ -32,18 +23,9 @@ gameView.addEventListener("click", function(e){
   playGame(e)
 });
 
-onload = hide(gameView);
-onload = updatePlayerInfoOnLoad();
+hide(gameView);
 
-
-function updatePlayerInfoOnLoad() {
-  message.innerText = game.message;
-  humanToken.innerText = game.human.token;
-  computerToken.innerText = game.computer.token;
-  humanPlayer.innerText = game.human.name;
-  computerPlayer.innerText = game.computer.name;
-  updateWinCount();
-};
+updateWinCount();
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
@@ -52,9 +34,9 @@ function playGame(e){
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
-  setTimeout(showFight, 600);
-  setTimeout(displayUpdatedInfo, 600);
-  setTimeout(game.resetGame, 2700);
+  setTimeout(showFight, 700);
+  setTimeout(displayUpdatedInfo, 700);
+  setTimeout(game.resetGame, 2800);
 };
 
 //Added the game. to this function above when the fuction resetGame (lines 72-79) is moved into the game.js. This doesn't make any sense to me to have it in the Game class but that's what the project prompt instructs. Will be asking about this tomorrow (Monday).
