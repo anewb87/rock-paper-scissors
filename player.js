@@ -3,7 +3,7 @@ class Player {
     this.name = name;
     this.token = token;
     this.wins = 0;
-    this.buddy;
+    this.buddy = null;
   }
 
   saveWinsToStorage() {
