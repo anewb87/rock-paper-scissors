@@ -66,10 +66,15 @@ This project was full of opportunities for learning and growth (aka challenges).
 
 
 ## Wins  
-Every time something works, it tends to feel like a major win.
+Every time something worked, it felt like a major win!  
+- Employing brand new-to-me methods/functions (like a `setTimeout()` or creating an element and then appending it to a parent node, for example) felt really great. The struggling of obtaining knowledge and adding more info to my 'arsenal' to use in the future is very real, but very worth it.  
+- A big win for me is the functionality. I can't find any bugs while playing my game, it's fully functional, and I feel like it accomplishes the requirements of the project well.  
+- CSS was fun for the first time! It's pretty simple and straightforward, nothing too intense, but I actually found that I enjoyed it rather than it was a huge headache of an obstacle. I enjoy design in general, and could see myself really growing to enjoy CSS.  
 
 ## Reflections  
-
+Some additional reflections:  
+- Front-loading on this project was *key* for me. At the outset, it seemed like it was going to be a sprinting marathon. Because that was my first impression, I took off from the starting block and kept at it. I feel that decision has served me well, and given me enough time to clean up my work.  
+- I'm learning how important it is to reach out for clarification early and then as often as necessary. I ended up re-working a number of aspects of my project because, even though I was unsure, I powered on only to find out later that I had misunderstood the requirement. This causes a lot of discouragement and time wasted. It's *always* a good idea to get another set of eyes on the instructions, to get a second opinion, to talk out and really solidify the goals BEFORE getting in deep.
 
 ## How to Install and Use   
 In your terminal, run:
