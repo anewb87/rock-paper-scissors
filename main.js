@@ -47,8 +47,8 @@ function updatePlayerInfoOnLoad() {
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
-    createToken.classList.add("human-token")
     e.target.parentNode.append(createToken)
+    createToken.classList.add("human-token")
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
