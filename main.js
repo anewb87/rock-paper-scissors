@@ -54,7 +54,7 @@ function playGame(e){
   }
   setTimeout(showFight, 600);
   setTimeout(displayUpdatedInfo, 600);
-  setTimeout(resetGame, 2400);
+  setTimeout(resetGame, 3000);
 };
 
 function updateWinCount() {
@@ -99,24 +99,22 @@ function displayBasicGame() {
   hide(selectGameView);
   hide(bike);
   hide(brunch);
+  hide(fightView);
   show(gameView);
   show(changeGameBtn);
-  hide(fightView);
   game.type = "basic";
   message.innerText = "choose your buddy";
-  //console.log(game)
 };
 
 function displayBeastGame() {
   hide(selectGameView);
+  hide(fightView);
   show(gameView);
   show(changeGameBtn);
   show(bike);
   show(brunch);
-  hide(fightView);
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
-  console.log(game)
 };
 
 function displayHome() {
@@ -133,34 +131,18 @@ function show(element) {
 };
 
 function hide(element) {
-    element.classList.add("hidden");
+  element.classList.add("hidden");
 };
 
+// function show(elements) {
+  //   for (var i = 0; i < elements.length; i++) {
+    //     elements[i].classList.remove('hidden');
+    //   }
+    // }
 
 
-//Wow. Hannah for the win with this feedback. Amazing. Also like 'aha! of course!' moment.
-//Will use to refactor
 // function hide(elements) {
 //   for (var i = 0; i < elements.length; i++) {
-//     elements[i].classList.add('hidden');
+//     elements[i].classList.add("hidden");
 //   }
-// }
-//
-// function show(elements) {
-//   for (var i = 0; i < elements.length; i++) {
-//     elements[i].classList.remove('hidden');
-//   }
-// }
-
-
-//dont forget to set timout- might not belong here, need to thing through
-//the event is load- then re-diplay the home page
-
-
-//appendChild youtube video: https://www.youtube.com/watch?v=umHdBuTw98c
-//kind of helpful: https://www.youtube.com/watch?v=y17RuWkWdn8&t=88s
-
-
-//function show(element, rule) {
-//     element.classList.remove(rule);
 // };
