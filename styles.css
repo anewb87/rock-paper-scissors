@@ -15,7 +15,7 @@ body {
   margin-top: 25px;
 }
 
-/* ~~~~~~~~~~ MAIN VIEW - SIDES ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ 'HOME VIEW' - SIDE BARS ~~~~~~~~~~~~ */
 
 .side-bar {
   width: 20%;
@@ -102,7 +102,7 @@ body {
   margin: 10px;
 }
 
-/* ~~~~~~~~~~ RESET AFTER GAME PLAY ~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ BUTTONS W/ SHARED STYLING ~~~~~~~~~~~~ */
 
 .change-game-button,
 .reset-wins-button {

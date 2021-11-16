@@ -1,16 +1,16 @@
 # Bear, Bee, & Bowling Ball: A Whimsical Rock-Paper-Scissors Game
 
 ## Table of Contents   
-  - Overview
-  - Project / Game in Action
-  - Goals
-  - Tech Stack
-  - Code Architecture
-  - Challenges
-  - Wins
-  - Reflections
-  - Install & Use
-  - Contributions
+  - [Overview](#overview)
+  - [Project / Game in Action](#project-/-game-in-action)
+  - [Goals](#goals)
+  - [Tech Stack](#tech-stack)
+  - [Code Architecture](#code-architecture)
+  - [Challenges](#challenges)
+  - [Wins](#wins)
+  - [Reflections](#reflections)
+  - [Install & Use](#install-&-use)
+  - [Contributions](#contributions)
 
 ## Overview  
 A classic game with a new name! This is an application that allows users to play *two* versions of a [rock-paper-scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) game against the computer. Users can select between the *basic* **Bear-Bee-Bowling Ball** version of the game or the *beast-mode* **Bear-Bee-Bowling Ball-Bike-Brunch** version.
@@ -22,17 +22,14 @@ After selecting their preferred version of the game, users will then select a *b
 ![View on Page Load](assets/view-on-page-load.png)  
 
 2. User selects which game version they would like to play. Once a selection is made, they are then presented with their *buddy* options.  
-
-  Basic Version:  
+Basic Version:  
 ![Basic Version](assets/basic-version.png)  
-
-  Beast Mode Version:
+Beast Mode Version:
 ![Beast Mode Version](assets/beast-mode-version.png)
 
 3. User then selects a *buddy* and plays as many rounds as they'd like.  
 The user has the option to change the type of game they'd like to play and can reset the win count. The current win count automatically saves to local storage so the user can come back to the game at any point and the scores will persist. The user has the ability to reset the score back to 0-0 as well.  
-
-  Game Demo:
+Game Demo:  
 ![giphy](https://media.giphy.com/media/5z0hjDPSFPOVdjr8pF/giphy.gif)
 
 ## Goals  
@@ -67,14 +64,14 @@ This project was full of opportunities for learning and growth (aka challenges).
 
 ## Wins  
 Every time something worked, it felt like a major win!  
-- Employing brand new-to-me methods/functions (like a `setTimeout()` or creating an element and then appending it to a parent node, for example) felt really great. The struggling of obtaining knowledge and adding more info to my 'arsenal' to use in the future is very real, but very worth it.  
-- A big win for me is the functionality. I can't find any bugs while playing my game, it's fully functional, and I feel like it accomplishes the requirements of the project well.  
+- Employing brand new-to-me methods/functions (like a `setTimeout()` or creating an element and then appending it to a parent node, for example) felt really great. The struggle of obtaining knowledge and adding more info to my 'arsenal' to use in the future is very real, but very worth it.  
+- A big win for me is the functionality. I can't find any bugs while playing my game, it's fully functional, I've added two additional pieces of functionality to the game, and I feel like it accomplishes the requirements of the project well.  
 - CSS was fun for the first time! It's pretty simple and straightforward, nothing too intense, but I actually found that I enjoyed it rather than it was a huge headache of an obstacle. I enjoy design in general, and could see myself really growing to enjoy CSS.  
 
 ## Reflections  
 Some additional reflections:  
-- Front-loading on this project was *key* for me. At the outset, it seemed like it was going to be a sprinting marathon. Because that was my first impression, I took off from the starting block and kept at it. I feel that decision has served me well, and given me enough time to clean up my work.  
-- I'm learning how important it is to reach out for clarification early and then as often as necessary. I ended up re-working a number of aspects of my project because, even though I was unsure, I powered on only to find out later that I had misunderstood the requirement. This causes a lot of discouragement and time wasted. It's *always* a good idea to get another set of eyes on the instructions, to get a second opinion, to talk out and really solidify the goals BEFORE getting in deep.
+- Front-loading on this project was *key* for me. At the outset, it seemed like it was going to be a sprinting marathon. Because that was my first impression, I took off from the starting block and kept at it. I feel that decision has served me well and given me enough time to clean up my work.  
+- I'm learning how important it is to reach out for clarification early and then as often as necessary. I ended up re-working a number of aspects of my project because, even though I was unsure, I powered on only to find out later that I had misunderstood the requirement. This causes a lot of discouragement and time wasted. It's *always* a good idea to get another set of eyes on the instructions, to get a second opinion, to talk out and really solidify the goals BEFORE getting in too deep.
 
 ## How to Install and Use   
 In your terminal, run:
