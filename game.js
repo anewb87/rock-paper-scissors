@@ -35,4 +35,8 @@ class Game {
       return false;
     }
   }
+  resetGame() {
+    this.human.buddy = null;
+    this.computer.buddy = null;
+  }
 };

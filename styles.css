@@ -126,13 +126,9 @@ body {
   color: #ECB983;
 }
 
-.disabled-button {
-  background-color: #DCDCDC;
-  color: #A9A9A9;
-}
-
+.disabled-button,
 .disabled-button:hover {
-  cursor:not-allowed;
+  cursor: not-allowed;
   background-color: #DCDCDC;
   color: #A9A9A9;
 }

@@ -37,7 +37,7 @@ function playGame(e){
   disableChangeGameBtn();
   setTimeout(showFight, 700);
   setTimeout(displayUpdatedInfo, 700);
-  setTimeout(resetGame, 2800);
+  setTimeout(resetGameBoard, 2800);
 };
 
 function disableChangeGameBtn() {
@@ -62,7 +62,7 @@ function resetWins() {
   location.reload();
 };
 
-function resetGame() {
+function resetGameBoard() {
   if (game.type === "beast") {
     displayBeastGame();
   } else {
@@ -70,11 +70,12 @@ function resetGame() {
   }
   createToken.remove();
   enableChangeGameBtn();
+  game.resetGame();
 };
 
 function showFight() {
   hide(gameView);
-  show(fightView)
+  show(fightView);
   viewFighters();
 };
 
