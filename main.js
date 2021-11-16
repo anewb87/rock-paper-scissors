@@ -40,9 +40,9 @@ function playGame(e){
 };
 
 function disableChangeGameBtn() {
-    changeGameBtn.classList.add("disabled-button");
-    changeGameBtn.classList.add("disabled-button:hover");
-    changeGameBtn.disabled = true;
+  changeGameBtn.classList.add("disabled-button");
+  changeGameBtn.classList.add("disabled-button:hover");
+  changeGameBtn.disabled = true;
 };
 
 function enableChangeGameBtn() {

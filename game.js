@@ -12,10 +12,10 @@ class Game {
     if (this.human.buddy === this.computer.buddy) {
       this.message = "😑 Awe, twins! But no one wins. 😑";
     } else if (this.humanWins()) {
-      this.human.wins ++;
+      this.human.wins++;
       this.message = "😄 Your buddy is the best buddy! Human wins! 😄";
     } else {
-      this.computer.wins ++;
+      this.computer.wins++;
       this.message = "💻  Bummer! Computer wins. 💻";
     }
   }
