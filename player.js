@@ -16,10 +16,10 @@ class Player {
   }
 
   takeTurn(buddy) {
-    var buddyOptions = ["brunch", "bike", "bear", "bee", "bowling"];
+    var buddyOptions = ['brunch', 'bike', 'bear', 'bee', 'bowling'];
     if (buddy) {
       this.buddy = buddy;
-    } else if (game.type === "beast"){
+    } else if (game.type === 'beast'){
       var randomBuddyIndex = Math.floor(Math.random() * 5);
       this.buddy = buddyOptions[randomBuddyIndex];
     } else {

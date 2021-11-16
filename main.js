@@ -94,21 +94,21 @@ function displayUpdatedInfo() {
 function displayBasicGame() {
   hide([selectGameView, bike, brunch, fightView])
   show([gameView, changeGameBtn]);
-  game.type = "basic";
-  message.innerText = "choose your buddy";
+  game.type = 'basic';
+  message.innerText = 'choose your buddy';
 };
 
 function displayBeastGame() {
   hide([selectGameView, fightView]);
   show([gameView, changeGameBtn, bike, brunch]);
-  game.type = "beast";
-  message.innerText = "choose your bestest buddy";
+  game.type = 'beast';
+  message.innerText = 'choose your bestest buddy';
 };
 
 function displayHome() {
   hide([gameView, bike, brunch, changeGameBtn]);
   show([selectGameView]);
-  message.innerText = "choose your game";
+  message.innerText = 'choose your game';
 };
 
 function show(elements) {
