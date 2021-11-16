@@ -99,7 +99,6 @@ function displayBasicGame() {
 };
 
 function displayBeastGame() {
-
   hide([selectGameView, fightView]);
   show([gameView, changeGameBtn, bike, brunch]);
   game.type = "beast";
