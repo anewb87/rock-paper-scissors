@@ -1,11 +1,11 @@
 var game = new Game();
 var basicBtn = document.querySelector(".basic-button");
 var beastBtn = document.querySelector(".beast-mode-button");
-var changeGameBtn = document.querySelector(".change-game-button");
-var resetWinsBtn = document.querySelector(".reset-wins-button");
-var selectGameView = document.querySelector(".select-game-section");
-var gameView = document.querySelector(".select-buddy-section");
-var fightView = document.querySelector(".fight-section");
+var changeGameBtn = document.querySelector(".js-change-game-button");
+var resetWinsBtn = document.querySelector(".js-reset-wins-button");
+var selectGameView = document.querySelector(".js-select-game-section");
+var gameView = document.querySelector(".js-select-buddy-section");
+var fightView = document.querySelector(".js-fight-section");
 var bike = document.querySelector(".bike");
 var brunch = document.querySelector(".brunch");
 var humanFighter = document.querySelector("#humanFighter");
