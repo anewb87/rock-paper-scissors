@@ -13,7 +13,7 @@ var computerFighter = document.querySelector("#computerFighter");
 var message = document.querySelector("h5");
 var humanWins = document.querySelector(".human-wins");
 var computerWins = document.querySelector(".computer-wins");
-var createToken = document.createElement("p")
+var createToken = document.createElement("p");
 
 basicBtn.addEventListener("click", displayBasicGame);
 beastBtn.addEventListener("click", displayBeastGame);
@@ -23,14 +23,13 @@ gameView.addEventListener("click", function(e){
   playGame(e)
 });
 
-hide(gameView);
-
+hide([gameView]);
 updateWinCount();
 
 function playGame(e){
   if (e.target.classList.contains("buddy-button-image")) {
-    e.target.parentNode.append(createToken)
-    createToken.classList.add("human-token")
+    e.target.parentNode.append(createToken);
+    createToken.classList.add("human-token");
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
   }
@@ -42,15 +41,15 @@ function playGame(e){
 
 function disableChangeGameBtn() {
     changeGameBtn.classList.add("disabled-button");
-    changeGameBtn.classList.add("disabled-button:hover")
+    changeGameBtn.classList.add("disabled-button:hover");
     changeGameBtn.disabled = true;
 };
 
 function enableChangeGameBtn() {
   changeGameBtn.classList.remove("disabled-button");
-  changeGameBtn.classList.remove("disabled-button:hover")
+  changeGameBtn.classList.remove("disabled-button:hover");
   changeGameBtn.disabled = false;
-}
+};
 
 function updateWinCount() {
   humanWins.innerText = game.human.retrieveWinsFromStorage() || 0
@@ -74,8 +73,8 @@ function resetGameBoard() {
 };
 
 function showFight() {
-  hide(gameView);
-  show(fightView);
+  hide([gameView]);
+  show([fightView]);
   viewFighters();
 };
 
@@ -93,53 +92,34 @@ function displayUpdatedInfo() {
 };
 
 function displayBasicGame() {
-  hide(selectGameView);
-  hide(bike);
-  hide(brunch);
-  hide(fightView);
-  show(gameView);
-  show(changeGameBtn);
+  hide([selectGameView, bike, brunch, fightView])
+  show([gameView, changeGameBtn]);
   game.type = "basic";
   message.innerText = "choose your buddy";
 };
 
 function displayBeastGame() {
-  hide(selectGameView);
-  hide(fightView);
-  show(gameView);
-  show(changeGameBtn);
-  show(bike);
-  show(brunch);
+
+  hide([selectGameView, fightView]);
+  show([gameView, changeGameBtn, bike, brunch]);
   game.type = "beast";
   message.innerText = "choose your bestest buddy";
 };
 
 function displayHome() {
-  hide(gameView);
-  hide(bike);
-  hide(brunch);
-  hide(changeGameBtn);
-  show(selectGameView);
+  hide([gameView, bike, brunch, changeGameBtn]);
+  show([selectGameView]);
   message.innerText = "choose your game";
 };
 
-function show(element) {
-  element.classList.remove("hidden");
+function show(elements) {
+  for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.remove('hidden');
+  }
 };
 
-function hide(element) {
-  element.classList.add("hidden");
+function hide(elements) {
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("hidden");
+  }
 };
-
-// function show(elements) {
-  //   for (var i = 0; i < elements.length; i++) {
-    //     elements[i].classList.remove('hidden');
-    //   }
-    // }
-
-
-// function hide(elements) {
-//   for (var i = 0; i < elements.length; i++) {
-//     elements[i].classList.add("hidden");
-//   }
-// };
