@@ -113,7 +113,7 @@ function displayHome() {
 
 function show(elements) {
   for (var i = 0; i < elements.length; i++) {
-      elements[i].classList.remove('hidden');
+      elements[i].classList.remove("hidden");
   }
 };
 
