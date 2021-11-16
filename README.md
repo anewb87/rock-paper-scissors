@@ -1,16 +1,16 @@
 # Bear, Bee, & Bowling Ball: A Whimsical Rock-Paper-Scissors Game
 
 ## Table of Contents   
-  - Overview
-  - Project / Game in Action
-  - Goals
-  - Tech Stack
-  - Code Architecture
-  - Challenges
-  - Wins
-  - Reflections
-  - Install & Use
-  - Contributions
+  - [Overview](#overview)
+  - [Project / Game in Action](#project-/-game-in-action)
+  - [Goals](#goals)
+  - [Tech Stack](#tech-stack)
+  - [Code Architecture](#code-architecture)
+  - [Challenges](#challenges)
+  - [Wins](#wins)
+  - [Reflections](#reflections)
+  - [Install & Use](#install-&-use)
+  - [Contributions](#contributions)
 
 ## Overview  
 A classic game with a new name! This is an application that allows users to play *two* versions of a [rock-paper-scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) game against the computer. Users can select between the *basic* **Bear-Bee-Bowling Ball** version of the game or the *beast-mode* **Bear-Bee-Bowling Ball-Bike-Brunch** version.

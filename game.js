@@ -10,13 +10,13 @@ class Game {
     this.human.takeTurn(buddy);
     this.computer.takeTurn();
     if (this.human.buddy === this.computer.buddy) {
-      this.message = '😑 Awe, twins! But no one wins. 😑';
+      this.updateResultMessage('😑 Awe, twins! But no one wins. 😑')
     } else if (this.humanWins()) {
       this.human.wins++;
-      this.message = '😄 Your buddy is the best buddy! Human wins! 😄';
+      this.updateResultMessage('😄 Your buddy is the best buddy! Human wins! 😄')
     } else {
       this.computer.wins++;
-      this.message = '💻  Bummer! Computer wins. 💻';
+      this.updateResultMessage('💻  Bummer! Computer wins. 💻');
     }
   }
 
@@ -35,8 +35,13 @@ class Game {
       return false;
     }
   }
+
   resetGame() {
     this.human.buddy = null;
     this.computer.buddy = null;
+  }
+
+  updateResultMessage(message) {
+    this.message = message;
   }
 };
