@@ -30,10 +30,10 @@ After selecting their preferred version of the game, users will then select a *b
 ![Beast Mode Version](assets/beast-mode-version.png)
 
 3. User then selects a *buddy* and plays as many rounds as they'd like.  
-The user has the option to change the type of game they'd like to play and can reset the win count. The current win count automatically saves to local storage so the user can come back to the game at any point and the scores will persist.  
+The user has the option to change the type of game they'd like to play and can reset the win count. The current win count automatically saves to local storage so the user can come back to the game at any point and the scores will persist. The user has the ability to reset the score back to 0-0 as well.  
 
   Game Demo:
-![giphy](https://media.giphy.com/media/Yp2pHBVssZ1tobBoqY/giphy.gif)
+![giphy](https://media.giphy.com/media/5z0hjDPSFPOVdjr8pF/giphy.gif)
 
 ## Goals  
 - Solidify and demonstrate an understanding of:
