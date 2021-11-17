@@ -13,7 +13,6 @@ var computerFighter = document.querySelector("#computerFighter");
 var message = document.querySelector("h5");
 var humanWins = document.querySelector(".human-wins");
 var computerWins = document.querySelector(".computer-wins");
-var buddyButtonArea = document.getElementsByClassName("buddy-button-image");
 var createToken = document.createElement("p");
 
 basicBtn.addEventListener("click", displayBasicGame);
