@@ -4,6 +4,7 @@ class Game {
     this.computer = new Player ('Computer', '💻');
     this.message = null;
     this.type = type;
+    this.gameInProgress = false;
   }
 
   determineWinner(buddy) {

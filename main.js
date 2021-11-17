@@ -13,6 +13,7 @@ var computerFighter = document.querySelector("#computerFighter");
 var message = document.querySelector("h5");
 var humanWins = document.querySelector(".human-wins");
 var computerWins = document.querySelector(".computer-wins");
+var buddyButtonArea = document.getElementsByClassName("buddy-button-image");
 var createToken = document.createElement("p");
 
 basicBtn.addEventListener("click", displayBasicGame);
@@ -27,16 +28,17 @@ hide([gameView]);
 updateWinCount();
 
 function playGame(e){
-  if (e.target.classList.contains("buddy-button-image")) {
+  if (e.target.classList.contains("buddy-button-image") && !game.gameInProgress) {
+    game.gameInProgress = true;
     e.target.parentNode.append(createToken);
     createToken.classList.add("human-token");
     createToken.innerText = game.human.token;
     game.determineWinner(e.target.id);
-  }
-  disableChangeGameBtn();
-  setTimeout(showFight, 700);
-  setTimeout(displayUpdatedInfo, 700);
-  setTimeout(resetGameBoard, 2800);
+    }
+    setTimeout(showFight, 700);
+    setTimeout(displayUpdatedInfo, 700);
+    setTimeout(resetGameBoard, 2800);
+    disableChangeGameBtn();
 };
 
 function showFight() {
@@ -71,6 +73,7 @@ function resetGameBoard() {
   createToken.remove();
   enableChangeGameBtn();
   game.resetGame();
+  game.gameInProgress = false;
 };
 
 function updateWinCount() {
