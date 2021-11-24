@@ -15,7 +15,7 @@
 ## Overview  
 A classic game with a new name! This is an application that allows users to play *two* versions of a [rock-paper-scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) game against the computer. Users can select between the *basic* **Bear-Bee-Bowling Ball** version of the game or the *beast-mode* **Bear-Bee-Bowling Ball-Bike-Brunch** version.
 After selecting their preferred version of the game, users will then select a *buddy* which will immediately go head-to-head against a computer generated *buddy*. A tie or winner is declared and one point is awarded per win. Play one game, play one million!
-<!-- [Play here!]() Deployment link in parenthesis    -->
+[Play here!](https://anewb87.github.io/rock-paper-scissors/)
 
 ## Project / Game in Action  
 1. When the application is first loaded, the score is 0-0. The *Human* (user) stats are displayed on the left side of the screen while the *Computer* stats are on the right.  

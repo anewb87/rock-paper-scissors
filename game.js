@@ -21,16 +21,21 @@ class Game {
     }
   }
 
-  humanWins(){
-    if (this.human.buddy === 'bear' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) {
+  humanWins() {
+    if (this.human.buddy === 'bear' &&
+    (this.computer.buddy === 'bowling' || this.computer.buddy === 'brunch')) {
       return true;
-    } else if (this.human.buddy === 'bee' && (this.computer.buddy === 'bear' || this.computer.buddy === 'bike')) {
+    } else if (this.human.buddy === 'bee' &&
+    (this.computer.buddy === 'bear' || this.computer.buddy === 'bike')) {
       return true;
-    } else if (this.human.buddy === 'bowling' && (this.computer.buddy === 'bee' || this.computer.buddy === 'brunch')) {
+    } else if (this.human.buddy === 'bowling' &&
+    (this.computer.buddy === 'bee' || this.computer.buddy === 'brunch')) {
       return true;
-    } else if (this.human.buddy === 'bike' && (this.computer.buddy === 'bowling' || this.computer.buddy === 'bear')) {
+    } else if (this.human.buddy === 'bike' &&
+    (this.computer.buddy === 'bowling' || this.computer.buddy === 'bear')) {
       return true;
-    } else if (this.human.buddy === 'brunch' && (this.computer.buddy === 'bike' || this.computer.buddy === 'bee')) {
+    } else if (this.human.buddy === 'brunch' &&
+    (this.computer.buddy === 'bike' || this.computer.buddy === 'bee')) {
       return true;
     } else {
       return false;
@@ -45,4 +50,4 @@ class Game {
   updateResultMessage(message) {
     this.message = message;
   }
-};
+}
