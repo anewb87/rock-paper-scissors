@@ -81,7 +81,7 @@ cd rock-paper-scissors
 open index.html      
 ```
 
-## Deployment Link  
+## Deployment Link
 https://anewb87.github.io/rock-paper-scissors/
 
 ## Contributions
